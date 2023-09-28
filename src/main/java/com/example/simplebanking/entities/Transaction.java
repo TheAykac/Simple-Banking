@@ -1,12 +1,11 @@
 package com.example.simplebanking.entities;
-
-import com.example.simplebanking.core.utilities.enums.TransactionTypes;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.UUID;
 
 @Entity
 @Data
@@ -26,6 +25,9 @@ public abstract class Transaction {
     @Column(name = "amount")
     private double amount;
 
+    @Column(name = "approval_code")
+    private String approvalCode;
+
     @ManyToOne()
     private Account account;
 
@@ -33,6 +35,7 @@ public abstract class Transaction {
         this.amount = amount;
         this.date = new Date();
     }
-
-
 }
+
+
+

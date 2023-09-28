@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class PhoneBillPaymentTransaction extends PaymentTransaction {
     private String phoneNumber;
-    public PhoneBillPaymentTransaction(String company, String phoneNumber, double amount) {
+    public PhoneBillPaymentTransaction(String accountNumber,String company, String phoneNumber, double amount) {
         super(company,amount);
         this.phoneNumber=phoneNumber;
     }

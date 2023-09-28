@@ -1,12 +1,15 @@
 package com.example.simplebanking;
 
+import com.example.simplebanking.core.utilities.dto.requireds.PaymentPhoneBillRequest;
 import com.example.simplebanking.core.utilities.result.ErrorDataResult;
 import com.example.simplebanking.entities.Account;
 import com.example.simplebanking.entities.DepositTransaction;
 import com.example.simplebanking.entities.PhoneBillPaymentTransaction;
 import com.example.simplebanking.entities.WithdrawalTransaction;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -31,12 +34,9 @@ public class SimpleBankingApplication {
         Map<String, String> validationErrors = new HashMap<String, String>();
         for (FieldError fieldError : methodArgumentNotValidException.getBindingResult().getFieldErrors()) {
             validationErrors.put(fieldError.getField(), fieldError.getDefaultMessage());
-
         }
-
         ErrorDataResult<Object> errorDataResult = new ErrorDataResult<Object>(validationErrors, "VALIDATION.EXCEPTIONS");
         return errorDataResult;
-
     }
 
     @ExceptionHandler
@@ -45,7 +45,5 @@ public class SimpleBankingApplication {
         ErrorDataResult<Object> errorDataResult = new ErrorDataResult<Object>(e.getMessage(), "BUSINESS.EXCEPTION");
         return errorDataResult;
     }
-
-
 
 }

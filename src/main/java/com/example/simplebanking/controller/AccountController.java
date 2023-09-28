@@ -3,6 +3,7 @@ package com.example.simplebanking.controller;
 import com.example.simplebanking.core.utilities.dto.requireds.CreateAccountRequest;
 import com.example.simplebanking.core.utilities.dto.requireds.CreditRequest;
 import com.example.simplebanking.core.utilities.dto.requireds.DebitRequest;
+import com.example.simplebanking.core.utilities.dto.requireds.PaymentPhoneBillRequest;
 import com.example.simplebanking.core.utilities.dto.responses.AccountDto;
 import com.example.simplebanking.core.utilities.result.DataResult;
 import com.example.simplebanking.core.utilities.result.Result;
@@ -44,6 +45,11 @@ public class AccountController {
        return accountService.deleteByAccountNumber(accountNumber);
     }
 
+    @DeleteMapping("/deleteById/{id}")
+    public Result deleteById(@PathVariable Long id){
+        return accountService.deleteById(id);
+    }
+
     @PostMapping("/credit")
     public DataResult<AccountDto> credit(@RequestBody @Valid CreditRequest creditRequest){
         return accountService.credit(creditRequest);
@@ -52,5 +58,10 @@ public class AccountController {
     @PostMapping("/debit")
     public DataResult<AccountDto> debit(@RequestBody @Valid DebitRequest debitRequest){
         return accountService.debit(debitRequest);
+    }
+
+    @PostMapping("/payPhoneBill")
+    public Result payPhoneBill(@RequestBody PaymentPhoneBillRequest paymentPhoneBillRequest) {
+        return accountService.payPhoneBill(paymentPhoneBillRequest);
     }
 }
