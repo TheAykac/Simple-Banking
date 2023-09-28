@@ -40,7 +40,7 @@ public class AccountController {
         return accountService.getById(id);
     }
 
-    @DeleteMapping("deleteByAccountNumber/{accountNumber}")
+    @DeleteMapping("/deleteByAccountNumber/{accountNumber}")
     public Result deleteByAccountNumber(@PathVariable String accountNumber){
        return accountService.deleteByAccountNumber(accountNumber);
     }
