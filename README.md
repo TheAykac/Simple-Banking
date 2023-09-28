@@ -1,13 +1,17 @@
-
-![Logo](https://gelecegiyazanlar.turkcell.com.tr/sites/default/files/etkinlik/etkinlik_resmi/2020-12/image-eteration-logo-dark_0.png)
+<p align="center">
+  <img src="https://gelecegiyazanlar.turkcell.com.tr/sites/default/files/etkinlik/etkinlik_resmi/2020-12/image-eteration-logo-dark_0.png" alt="Description of the image">
+</p>
 
     
 # Sipmle Banking
 
 Bu proje, Eteration firması tarafından işe alım süreci için tarafıma gönderilen bir ödevdir. Projeyi kısaca özetlemem gerekirse, kullanıcı banka hesabı oluşturabilir. Bu hesap üzerinden para ekleyebilir ve çekebilir. Aynı zamanda kullanıcı, hesabındaki parayı kullanarak telefon faturasını ödeyebilir.
 
+<p align="center">
+  <img src="https://img.freepik.com/premium-vector/bank-building-money-bank-financing-money-exchange-financial-services-atm-giving-out-money_625536-194.jpg" alt="Description of the image">
+</p>
 
-![Logo](https://img.freepik.com/premium-vector/bank-building-money-bank-financing-money-exchange-financial-services-atm-giving-out-money_625536-194.jpg)
+
 
 
 ## API Kullanımı
