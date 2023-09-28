@@ -106,7 +106,8 @@ Bu proje, Eteration firması tarafından işe alım süreci için tarafıma gön
 | :-------- | :------- | :------------------------- |
 | `paymentPhoneBillRequest` | `PaymentPhoneBillRequest` |  Fatura Odeme. |
 
-
+## Postman Collection
+Burada projemizin Postman koleksiyonunu bulabilirsiniz: [Postman Koleksiyonu](https://github.com/TheAykac/Simple-Banking/blob/master/collection/SimpleBanking.postman_collection.json)
   
 ## Geri Bildirim
 
